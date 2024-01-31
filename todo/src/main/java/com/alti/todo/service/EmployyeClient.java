@@ -8,7 +8,7 @@ import com.alti.todo.model.Employee;
 
 import lombok.NoArgsConstructor;
 
-@FeignClient(url = "http://localhost:8088")
+@FeignClient(name = "EMPLOYEE-SERVICE" , url = "http://localhost:8088")
 public interface EmployyeClient {
 
 	@GetMapping("/employee/{id}")

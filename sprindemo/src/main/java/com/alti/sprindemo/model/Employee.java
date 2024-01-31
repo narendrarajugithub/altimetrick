@@ -20,6 +20,6 @@ public class Employee implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long ID;
 	private String name;
-	private String designamtion;
+	private String designation;
 
 }
