@@ -13,12 +13,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alti.sprindemo.model.Employee;
+import com.alti.sprindemo.security.config.vendorConfiguration;
 import com.alti.sprindemo.service.EmployeeService;
 
 @RestController
 public class EmployeeController {
 	
 	private static Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
+	@Autowired
+	private vendorConfiguration vendorConfiguration;
 	
 	@Autowired
 	private EmployeeService employeeService;
@@ -36,6 +39,7 @@ public class EmployeeController {
 	public ResponseEntity<?>  getEmployee(@PathVariable Long id) {
 		LOG.info("Employee get performed");
 		//employeeService.getEmployee(id);
+		LOG.info("name{}, Location{}",vendorConfiguration.getName(),vendorConfiguration.getLocation());
 		Long e_id=id;
 		try {
 		return ResponseEntity.accepted().body(employeeService.getEmployee(e_id));
