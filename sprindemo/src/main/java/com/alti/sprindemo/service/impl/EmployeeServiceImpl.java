@@ -34,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		// TODO Auto-generated method stub
 		
 		
-	Optional<Employee>	 employee =Optional.ofNullable(employeeRepository.findById(id)).orElseThrow();
+	Optional<Employee>	 employee =Optional.ofNullable(employeeRepository.findById(id)).orElseThrow(null);
 		
 		return employee.get();
 	}

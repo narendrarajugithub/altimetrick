@@ -7,8 +7,8 @@ import com.alti.logical.samples.core.model.ImmuEmployee;
 public class CoreSamples {
 	
 	public static void main(String[] args) {
-		// autoBoxAndUnbox();
-		
+		//autoBoxAndUnbox();
+		exceptionTest();
 	
 		
 	}
@@ -24,6 +24,25 @@ public class CoreSamples {
 		
 		int no =10;
 	}
+	
+	 public static int exceptionTest()
+	  {
+	   int i=6;
+	   try{
+	    throw new NullPointerException();
+	   }
+	   catch(Exception e)
+	   {
+	    i=10;
+	    return i;
+	   }
+	   finally
+	   {
+	    i=20;
+	    System.out.println("In finally block");
+	   }
+	 
+	  }
 		
 	
 	

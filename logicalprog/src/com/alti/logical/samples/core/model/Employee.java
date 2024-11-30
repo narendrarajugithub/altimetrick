@@ -8,9 +8,10 @@ public class Employee {
 	private String name;
 	private String designation;
 	private Integer pincode;
+
 	
 	
-	
+
 	public Integer getPincode() {
 		return pincode;
 	}
@@ -22,6 +23,9 @@ public class Employee {
 		this.id = id;
 		this.name = name;
 		this.designation = designation;
+	}
+	public Employee(String string, int i) {
+		// TODO Auto-generated constructor stub
 	}
 	public Integer getId() {
 		return id;

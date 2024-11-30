@@ -7,7 +7,8 @@ public class TestRegix {
 
 	public static void main(String[] args) {
 		// testdateRegex();
-		testEmailRegex();
+		//testEmailRegex();
+		ipAddress(); 
 	}
 
 	public static void testdateRegex() {
@@ -37,5 +38,17 @@ public class TestRegix {
 
 	}
 	
+	public static void ipAddress() {
+		String ip = "000.12.12.34";
+		String ipreg ="((0[0-9][0-9]|[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}(0[0-9][0-9]|[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])";
+		Pattern pat = Pattern.compile(ipreg);
+		Matcher match =pat.matcher(ip);
+		if(match.matches()) {
+			System.out.println("true");
+		}else {
+			System.out.println("false");
+		}
+		
+	}
 	
 }
